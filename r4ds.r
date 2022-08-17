@@ -35,4 +35,11 @@ delays %>%
   filter(n > 20) %>% 
   ggplot(mapping = aes(x = n, y = delay)) + 
   geom_point(alpha = 0.1)
+flights %>% 
+  filter(!is.na(tailnum)) %>% 
+  select('tailnum',ends_with('delay')) %>% 
+  mutate(delay = arr_delay + dep_delay) %>% 
+  arrange(delay)
 
+diamonds <- diamonds
+diamonds %>% ggplot(mapping = aes(x = carat,color =cut)) + geom_freqpoly(binwidth = 0.1)
