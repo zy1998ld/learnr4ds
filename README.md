@@ -1,13 +1,15 @@
-# r4ds 学习之路 [:mag:]
-
+# R4ds 学习之路 [:mag:]
+[toc]
 <details>
     <summary>目录</summary>
-
 - [ggplot](#ggplot)
 - [数据转换](#数据转换)
 - [数据探索分析](#数据探索分析)
 
 </details>
+
+
+
 
 ## ggplot
 
@@ -79,3 +81,8 @@ r 中的 lm 函数会直接将多因子变量转换为哑变量进行分析
 ### 生存数据
 
 $(t_i,\delta_i)$是生存数据的形式，t 是删失和最后随访时间，δ 是 0/1 变量，0 = censored， 1 = event。在 r 中用 Surv(time,status)表示生成生存数据
+
+
+
+## 新的函数
+`unlist`将数据框转换为单列
